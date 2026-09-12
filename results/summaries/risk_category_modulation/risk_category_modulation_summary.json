@@ -1,0 +1,30 @@
+{
+  "n_train": 10882,
+  "n_heldout": 2839,
+  "final_train_oof_mae": 32.796417788517424,
+  "final_heldout_mae": 31.77026365632957,
+  "best_by_train_oof": {
+    "variant": "risk3_x_pls_gap_gamma_positive",
+    "train_oof_mae": 32.76810082989888,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.700690614601047,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.06957304172852058,
+    "improved_rate_vs_final": 0.4906657273687918,
+    "mean_prediction_shift_vs_final": -0.9939162873544776,
+    "meta_json": "{\"gammas\": {\"__GLOBAL__\": 1.0, \"risk_0|pls_higher\": 0.7000000000000001, \"risk_0|pls_lower\": 0.0, \"risk_0|pls_near\": 0.775, \"risk_1|pls_higher\": 1.375, \"risk_1|pls_lower\": 0.5750000000000001, \"risk_1|pls_much_higher\": 1.25, \"risk_1|pls_near\": 1.425, \"risk_2|pls_higher\": 2.5, \"risk_2|pls_lower\": 0.9750000000000001, \"risk_2|pls_much_higher\": 2.5, \"risk_2|pls_near\": 1.4000000000000001}, \"min_n\": 100, \"n_gammas\": 12, \"risk_oof_corr_abs_error\": 0.4545378570140534}"
+  },
+  "best_by_heldout_exploratory": {
+    "variant": "risk3_x_family_x_pls_gap_gamma_signed",
+    "train_oof_mae": 32.811180060580945,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.579505676856442,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.19075797947312492,
+    "improved_rate_vs_final": 0.3663261711870377,
+    "mean_prediction_shift_vs_final": -0.6644097534525154,
+    "meta_json": "{\"gammas\": {\"__GLOBAL__\": 1.0000000000000018, \"risk_0|Device implant|pls_higher\": 0.3500000000000012, \"risk_0|Device implant|pls_lower\": -1.0, \"risk_0|Device implant|pls_near\": 1.4500000000000022, \"risk_0|Device revision-generator-upgrade|pls_higher\": 0.6000000000000014, \"risk_0|Device revision-generator-upgrade|pls_lower\": 0.3250000000000012, \"risk_0|Device revision-generator-upgrade|pls_near\": 1.0000000000000018, \"risk_0|Diagnostic/testing|pls_higher\": 0.6000000000000014, \"risk_0|Diagnostic/testing|pls_near\": -0.27499999999999936, \"risk_1|AF/PVI ablation|pls_higher\": 1.7500000000000024, \"risk_1|AF/PVI ablation|pls_lower\": 1.5000000000000022, \"risk_1|AF/PVI ablation|pls_near\": 1.8500000000000025, \"risk_1|Device implant|pls_higher\": 0.8500000000000016, \"risk_1|Device implant|pls_lower\": 1.250000000000002, \"risk_1|Device implant|pls_near\": 0.9000000000000017, \"risk_1|Device revision-generator-upgrade|pls_near\": 2.1250000000000027, \"risk_1|Other ablation|pls_near\": 0.30000000000000115, \"risk_2|AF/PVI ablation|pls_higher\": 2.500000000000003, \"risk_2|AF/PVI ablation|pls_near\": 1.3750000000000022, \"risk_2|Device implant|pls_near\": -0.1999999999999993, \"risk_2|Other ablation|pls_higher\": 2.500000000000003, \"risk_2|Other ablation|pls_near\": 0.4500000000000013, \"risk_2|VT/PVC ablation|pls_higher\": 2.500000000000003, \"risk_2|VT/PVC ablation|pls_much_higher\": 2.500000000000003, \"risk_2|VT/PVC ablation|pls_near\": 1.8250000000000024}, \"min_n\": 140, \"n_gammas\": 25, \"risk_oof_corr_abs_error\": 0.4545378570140534}"
+  },
+  "forbidden_llm_feature_file_read": false,
+  "note": "Use best_by_train_oof for leakage-safe selection; best_by_heldout_exploratory is diagnostic only."
+}

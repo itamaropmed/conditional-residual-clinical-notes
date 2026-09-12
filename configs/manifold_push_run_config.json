@@ -1,0 +1,15 @@
+{
+  "tabular_data": "/Users/itamarzernitsky/PycharmProjects/Clinical_notes/data/mayo/mayo_hrs_tabular_features_and_durations.parquet",
+  "phrase_dir": "work/no_llm_notes/raw_strict_high_signal_tuned_split",
+  "tabular_sweep_dir": "work/no_llm_notes/tabular_sweep",
+  "output_dir": "work/no_llm_notes/raw_strict_manifold_push_surgical_full",
+  "n_folds": 5,
+  "seed": 4242,
+  "n_boot": 200,
+  "max_variants": 0,
+  "max_pls_components": 56,
+  "profile": "surgical",
+  "n_variants": 127,
+  "forbidden_llm_feature_file_read": false,
+  "blend_selection": "convex weights fit on train OOF predictions only"
+}

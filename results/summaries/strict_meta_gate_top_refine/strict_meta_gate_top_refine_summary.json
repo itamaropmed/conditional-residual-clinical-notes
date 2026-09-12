@@ -1,0 +1,104 @@
+{
+  "n_train": 10882,
+  "n_heldout": 2839,
+  "patient_overlap": 0,
+  "final_train_oof_mae": 32.796417788517424,
+  "final_heldout_mae": 31.77026365632957,
+  "procedure_family_train_oof_mae": 32.76927961993881,
+  "procedure_family_heldout_mae": 31.607522369553593,
+  "best_by_train_oof": {
+    "variant": "topref_pair__pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00__signed_resid_hgb8_x_family_cap_gamma__delta_hgb4_proc6_none_n80_m0.02",
+    "train_oof_mae": 32.71568392026544,
+    "heldout_mae": 31.556418073067334,
+    "heldout_gain_vs_final": 0.21384558326223382,
+    "heldout_gain_ci95": [
+      0.1001120179957376,
+      0.32594709995718024
+    ],
+    "improved_rate_vs_final": 0.48890454385346954,
+    "large_wins_gt10": 23,
+    "large_losses_ltminus10": 16,
+    "meta": {
+      "selection": "targeted strict GroupKFold pair blend",
+      "first": "pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00",
+      "second": "signed_resid_hgb8_x_family_cap_gamma",
+      "score": "delta_hgb4_proc",
+      "k": 6,
+      "extra": "none",
+      "min_n": 80,
+      "margin": 0.02,
+      "grid_step": 0.01,
+      "global_weight_on_second": 0.37,
+      "n_weights": 4,
+      "edges": [
+        -16.74457655240093,
+        -1.2491905736738644,
+        -0.3816439051781799,
+        -0.030455343247066224,
+        0.07514041315162956,
+        0.6576437134440525,
+        16.215586197019462
+      ],
+      "weights": {
+        "__GLOBAL__": 0.37,
+        "delta_hgb4_proc6_0": 1.0,
+        "delta_hgb4_proc6_1": 0.0,
+        "delta_hgb4_proc6_5": 0.0
+      }
+    }
+  },
+  "best_by_heldout_exploratory": {
+    "variant": "topref_pair__procedure_family_gamma_positive__signed_resid_hgb8_x_family_cap_gamma__candidate_spread7_family_n80_m0.02",
+    "train_oof_mae": 32.780635503022495,
+    "heldout_mae": 31.52340294571183,
+    "heldout_gain_vs_final": 0.24686071061773784,
+    "heldout_gain_ci95": [
+      0.137068387559399,
+      0.3563766422922528
+    ],
+    "improved_rate_vs_final": 0.5227192673476576,
+    "large_wins_gt10": 10,
+    "large_losses_ltminus10": 2,
+    "meta": {
+      "selection": "targeted strict GroupKFold pair blend",
+      "first": "procedure_family_gamma_positive",
+      "second": "signed_resid_hgb8_x_family_cap_gamma",
+      "score": "candidate_spread",
+      "k": 7,
+      "extra": "family",
+      "min_n": 80,
+      "margin": 0.02,
+      "grid_step": 0.01,
+      "global_weight_on_second": 0.48,
+      "n_weights": 15,
+      "edges": [
+        0.0,
+        0.1147956613839448,
+        0.3058621149052171,
+        0.5340592682204768,
+        0.8169923400448483,
+        1.1847416518481255,
+        1.8198463122347914,
+        9.859383034383283
+      ],
+      "weights": {
+        "__GLOBAL__": 0.48,
+        "candidate_spread7_1|Other ablation": 1.0,
+        "candidate_spread7_3|Device revision-generator-upgrade": 1.0,
+        "candidate_spread7_4|AF/PVI ablation": 0.0,
+        "candidate_spread7_4|Device revision-generator-upgrade": 0.0,
+        "candidate_spread7_4|Other ablation": 1.0,
+        "candidate_spread7_5|AF/PVI ablation": 1.0,
+        "candidate_spread7_5|Diagnostic/testing": 0.0,
+        "candidate_spread7_5|Other ablation": 1.0,
+        "candidate_spread7_5|VT/PVC ablation": 0.0,
+        "candidate_spread7_6|Device implant": 0.0,
+        "candidate_spread7_6|Device revision-generator-upgrade": 0.0,
+        "candidate_spread7_6|Diagnostic/testing": 0.0,
+        "candidate_spread7_6|Lead/device extraction-removal": 1.0,
+        "candidate_spread7_6|Other ablation": 0.93
+      }
+    }
+  },
+  "forbidden_llm_feature_file_read": false
+}

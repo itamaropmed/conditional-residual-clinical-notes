@@ -1,0 +1,29 @@
+# ---- clinical data: never commit ----
+data/
+*.parquet
+*.npz
+**/note_bundles*
+**/*notes*.csv
+**/*predictions*.csv
+!results/summaries/**/*_results.csv
+
+# ---- environments ----
+.venv/
+venv/
+env/
+.conda/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# ---- os / editor ----
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# ---- run outputs ----
+work/
+outputs/
+*.log

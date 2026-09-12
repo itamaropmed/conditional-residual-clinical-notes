@@ -1,0 +1,388 @@
+{
+  "forbidden_llm_feature_file_read": false,
+  "forbidden_llm_feature_file": "/Users/itamarzernitsky/PycharmProjects/Clinical_notes/data/mayo/mayo_hrs_llm_features_top11.parquet",
+  "notes_data": "/Users/itamarzernitsky/PycharmProjects/Clinical_notes/data/mayo/mayo_hrs_notes_anonymized_merged.parquet",
+  "cutoff_rule": "raw doc_date < scheduled_in_room - 2d, timestamp exact, max age 548d",
+  "train_rows": 10882,
+  "test_rows": 2839,
+  "overlap_patients": 0,
+  "bundle_attrs": {
+    "note_rows_seen": "3179288",
+    "note_rows_matched_patient": "3144540",
+    "note_rows_rejected_postop_doc_type": "145426",
+    "note_cutoff_policy": "timestamp",
+    "include_same_day_preop_note_types": "False",
+    "keep_postop_doc_types": "False",
+    "note_rows_attached_events": "295463"
+  },
+  "bundles_out": 13721,
+  "coverage_all": 1.0,
+  "train_note_coverage": 0.9205109354897997,
+  "test_note_coverage": 0.9978865797816132,
+  "train_median_notes": 24.0,
+  "test_median_notes": 24.0,
+  "train_median_chars": 24377.0,
+  "test_median_chars": 24702.0,
+  "raw_note_lexical_probes_train": {
+    "total_time": 0.3721742326778166,
+    "post_op": 0.12479323653740121,
+    "tolerated_procedure_well": 0.04723396434478956,
+    "discharge_summary": 0.02352508730012865,
+    "case_ended_or_completed": 0.0,
+    "out_of_room": 0.001654107700790296,
+    "actual_duration": 9.189487226612754e-05,
+    "procedure_time": 0.003492005146112847
+  },
+  "raw_note_lexical_probes_test": {
+    "total_time": 0.4691792884818598,
+    "post_op": 0.14265586474110603,
+    "tolerated_procedure_well": 0.059528002817893624,
+    "discharge_summary": 0.029587883057414582,
+    "case_ended_or_completed": 0.0,
+    "out_of_room": 0.0003522367030644593,
+    "actual_duration": 0.0,
+    "procedure_time": 0.0014089468122578373
+  },
+  "high_signal_red_flags_train": {
+    "post": 0.5385039514795075,
+    "discharge": 0.11753354162837713,
+    "tolerated": 0.04493659253813637,
+    "procedure_well": 0.0037676897629112297,
+    "out_of_room": 9.189487226612754e-05,
+    "actual_duration": 0.0,
+    "total_time": 0.022606138577467377
+  },
+  "high_signal_red_flags_test": {
+    "post": 0.6083127861923212,
+    "discharge": 0.134202183867559,
+    "tolerated": 0.04579077139837971,
+    "procedure_well": 0.003522367030644593,
+    "out_of_room": 0.0003522367030644593,
+    "actual_duration": 0.0,
+    "total_time": 0.03134906657273688
+  },
+  "top_markers_train": [
+    {
+      "marker": "src_diagnostic_device",
+      "case_count": 171652
+    },
+    {
+      "marker": "src_diagnostic_device_concept_inpatient_instability",
+      "case_count": 127676
+    },
+    {
+      "marker": "src_progress_plan",
+      "case_count": 117911
+    },
+    {
+      "marker": "src_telephone",
+      "case_count": 92045
+    },
+    {
+      "marker": "src_consult_hnp",
+      "case_count": 77507
+    },
+    {
+      "marker": "proc_other_concept_inpatient_instability",
+      "case_count": 75054
+    },
+    {
+      "marker": "proc_device_lead_concept_inpatient_instability",
+      "case_count": 56217
+    },
+    {
+      "marker": "src_progress_plan_concept_inpatient_instability",
+      "case_count": 50466
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_inpatient_instability",
+      "case_count": 49262
+    },
+    {
+      "marker": "src_diagnostic_device_concept_vt_pvc_instability",
+      "case_count": 35409
+    },
+    {
+      "marker": "proc_device_lead_concept_device_lead_complexity",
+      "case_count": 32910
+    },
+    {
+      "marker": "src_progress_plan_concept_anticoag_thrombus_tee",
+      "case_count": 31990
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_anticoag_thrombus_tee",
+      "case_count": 30739
+    },
+    {
+      "marker": "proc_other_concept_anticoag_thrombus_tee",
+      "case_count": 28871
+    },
+    {
+      "marker": "src_consult_hnp_concept_inpatient_instability",
+      "case_count": 25305
+    },
+    {
+      "marker": "proc_vt_pvc_concept_vt_pvc_instability",
+      "case_count": 23096
+    },
+    {
+      "marker": "proc_vt_pvc_concept_inpatient_instability",
+      "case_count": 22585
+    },
+    {
+      "marker": "src_progress_plan_concept_device_lead_complexity",
+      "case_count": 20734
+    },
+    {
+      "marker": "proc_device_lead_concept_vt_pvc_instability",
+      "case_count": 20179
+    },
+    {
+      "marker": "src_diagnostic_device_concept_device_lead_complexity",
+      "case_count": 19399
+    },
+    {
+      "marker": "src_progress_plan_concept_vt_pvc_instability",
+      "case_count": 17740
+    },
+    {
+      "marker": "src_other",
+      "case_count": 17450
+    },
+    {
+      "marker": "proc_other_concept_vt_pvc_instability",
+      "case_count": 17367
+    },
+    {
+      "marker": "proc_other_concept_device_lead_complexity",
+      "case_count": 17301
+    },
+    {
+      "marker": "proc_device_lead_concept_anticoag_thrombus_tee",
+      "case_count": 17111
+    },
+    {
+      "marker": "src_telephone_concept_anticoag_thrombus_tee",
+      "case_count": 16707
+    },
+    {
+      "marker": "src_diagnostic_device_concept_anticoag_thrombus_tee",
+      "case_count": 15297
+    },
+    {
+      "marker": "src_consult_hnp_concept_vt_pvc_instability",
+      "case_count": 14031
+    },
+    {
+      "marker": "src_consult_hnp_concept_device_lead_complexity",
+      "case_count": 11549
+    },
+    {
+      "marker": "proc_svt_pathway_concept_inpatient_instability",
+      "case_count": 10964
+    },
+    {
+      "marker": "src_telephone_concept_device_lead_complexity",
+      "case_count": 10610
+    },
+    {
+      "marker": "src_consult_hnp_concept_anticoag_thrombus_tee",
+      "case_count": 9656
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_vt_pvc_instability",
+      "case_count": 9543
+    },
+    {
+      "marker": "src_diagnostic_device_concept_accessory_svt_mapping",
+      "case_count": 9410
+    },
+    {
+      "marker": "src_other_concept_inpatient_instability",
+      "case_count": 8901
+    },
+    {
+      "marker": "src_telephone_concept_inpatient_instability",
+      "case_count": 8431
+    },
+    {
+      "marker": "proc_svt_pathway_concept_accessory_svt_mapping",
+      "case_count": 8068
+    },
+    {
+      "marker": "proc_other_concept_accessory_svt_mapping",
+      "case_count": 7745
+    },
+    {
+      "marker": "proc_tilt_concept_inpatient_instability",
+      "case_count": 7639
+    },
+    {
+      "marker": "src_other_concept_anticoag_thrombus_tee",
+      "case_count": 7515
+    }
+  ],
+  "top_markers_test": [
+    {
+      "marker": "src_diagnostic_device",
+      "case_count": 47295
+    },
+    {
+      "marker": "src_diagnostic_device_concept_inpatient_instability",
+      "case_count": 37165
+    },
+    {
+      "marker": "src_progress_plan",
+      "case_count": 30287
+    },
+    {
+      "marker": "src_consult_hnp",
+      "case_count": 22950
+    },
+    {
+      "marker": "src_telephone",
+      "case_count": 22136
+    },
+    {
+      "marker": "proc_other_concept_inpatient_instability",
+      "case_count": 19617
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_inpatient_instability",
+      "case_count": 16845
+    },
+    {
+      "marker": "proc_device_lead_concept_inpatient_instability",
+      "case_count": 13668
+    },
+    {
+      "marker": "src_progress_plan_concept_inpatient_instability",
+      "case_count": 13220
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_anticoag_thrombus_tee",
+      "case_count": 9222
+    },
+    {
+      "marker": "src_diagnostic_device_concept_vt_pvc_instability",
+      "case_count": 8954
+    },
+    {
+      "marker": "proc_vt_pvc_concept_inpatient_instability",
+      "case_count": 8038
+    },
+    {
+      "marker": "proc_vt_pvc_concept_vt_pvc_instability",
+      "case_count": 7444
+    },
+    {
+      "marker": "src_other",
+      "case_count": 7236
+    },
+    {
+      "marker": "src_consult_hnp_concept_inpatient_instability",
+      "case_count": 7169
+    },
+    {
+      "marker": "proc_other_concept_anticoag_thrombus_tee",
+      "case_count": 6810
+    },
+    {
+      "marker": "proc_device_lead_concept_device_lead_complexity",
+      "case_count": 6801
+    },
+    {
+      "marker": "src_progress_plan_concept_anticoag_thrombus_tee",
+      "case_count": 6735
+    },
+    {
+      "marker": "src_progress_plan_concept_device_lead_complexity",
+      "case_count": 5036
+    },
+    {
+      "marker": "src_progress_plan_concept_vt_pvc_instability",
+      "case_count": 5036
+    },
+    {
+      "marker": "src_diagnostic_device_concept_anticoag_thrombus_tee",
+      "case_count": 4755
+    },
+    {
+      "marker": "proc_other_concept_vt_pvc_instability",
+      "case_count": 4405
+    },
+    {
+      "marker": "src_consult_hnp_concept_vt_pvc_instability",
+      "case_count": 4344
+    },
+    {
+      "marker": "src_telephone_concept_anticoag_thrombus_tee",
+      "case_count": 4253
+    },
+    {
+      "marker": "proc_device_lead_concept_vt_pvc_instability",
+      "case_count": 4125
+    },
+    {
+      "marker": "proc_other_concept_device_lead_complexity",
+      "case_count": 3920
+    },
+    {
+      "marker": "proc_device_lead_concept_anticoag_thrombus_tee",
+      "case_count": 3818
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_vt_pvc_instability",
+      "case_count": 3691
+    },
+    {
+      "marker": "src_consult_hnp_concept_device_lead_complexity",
+      "case_count": 3418
+    },
+    {
+      "marker": "src_other_concept_inpatient_instability",
+      "case_count": 3227
+    },
+    {
+      "marker": "src_consult_hnp_concept_anticoag_thrombus_tee",
+      "case_count": 3134
+    },
+    {
+      "marker": "src_diagnostic_device_concept_accessory_svt_mapping",
+      "case_count": 3124
+    },
+    {
+      "marker": "src_diagnostic_device_concept_device_lead_complexity",
+      "case_count": 2771
+    },
+    {
+      "marker": "proc_other_concept_accessory_svt_mapping",
+      "case_count": 2510
+    },
+    {
+      "marker": "src_telephone_concept_device_lead_complexity",
+      "case_count": 2494
+    },
+    {
+      "marker": "proc_svt_pathway_concept_inpatient_instability",
+      "case_count": 2278
+    },
+    {
+      "marker": "src_other_concept_anticoag_thrombus_tee",
+      "case_count": 2278
+    },
+    {
+      "marker": "proc_tilt_concept_inpatient_instability",
+      "case_count": 2241
+    },
+    {
+      "marker": "src_consult_hnp_concept_accessory_svt_mapping",
+      "case_count": 2134
+    },
+    {
+      "marker": "proc_af_pvi_flutter_concept_device_lead_complexity",
+      "case_count": 1993
+    }
+  ]
+}

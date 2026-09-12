@@ -1,0 +1,10 @@
+{
+  "refit_final_mae": 31.77026365632957,
+  "saved_final_mae": 31.77026365632957,
+  "max_abs_difference_vs_saved_prediction": 5.684341886080802e-14,
+  "mean_abs_difference_vs_saved_prediction": 2.8156413445935638e-15,
+  "gamma": 1.55,
+  "seed": 4803,
+  "forbidden_llm_feature_file_read": false,
+  "interpretability_note": "For a linear residual head, integrated gradients from zero baseline in standardized latent space equal feature_value * coefficient."
+}

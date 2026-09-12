@@ -1,0 +1,43 @@
+{
+  "n_train": 10882,
+  "n_heldout": 2839,
+  "final_train_oof_mae": 32.796417788517424,
+  "final_heldout_mae": 31.77026365632957,
+  "best_by_train_oof": {
+    "variant": "crossfit_residual_hgb",
+    "train_oof_mae": 32.72445975338648,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.737201674290997,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.03306198203857191,
+    "improved_rate_vs_final": 0.4984149348362099,
+    "mean_prediction_shift_vs_final": -0.06348406761654013,
+    "meta_json": "{\"alpha\": 0.5000000000000009, \"model\": \"hgb\", \"resid_oof_corr_target\": 0.07730064934120169}",
+    "heldout_gain_ci95": [
+      -0.03161230632115925,
+      0.09640819934926692
+    ],
+    "large_wins_gt10": 11,
+    "large_losses_ltminus10": 9
+  },
+  "best_by_heldout_exploratory": {
+    "variant": "nested_risk_abs3_x_family_cap_gamma",
+    "train_oof_mae": 32.77196663128073,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.60745249352906,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.16281116280050395,
+    "improved_rate_vs_final": 0.4885523071504051,
+    "mean_prediction_shift_vs_final": -0.9352548136260985,
+    "meta_json": "{\"edges\": [6.408825357385612, 22.839598857868406, 37.076594301952774, 112.97864796690767], \"k\": 3, \"kind\": \"extra_trees\", \"min_n\": 120, \"params\": {\"__GLOBAL__\": {\"cap\": 12.0, \"gamma\": 1.0}, \"risk_abs3_0|AF/PVI ablation\": {\"cap\": 15.0, \"gamma\": 0.55}, \"risk_abs3_0|Device implant\": {\"cap\": 4.0, \"gamma\": 0.9500000000000001}, \"risk_abs3_0|Device revision-generator-upgrade\": {\"cap\": 12.0, \"gamma\": 0.75}, \"risk_abs3_0|Diagnostic/testing\": {\"cap\": 4.0, \"gamma\": 0.15000000000000002}, \"risk_abs3_0|LAA closure\": {\"cap\": 10.0, \"gamma\": 1.0}, \"risk_abs3_0|Other\": {\"cap\": 4.0, \"gamma\": 0.5}, \"risk_abs3_0|Other ablation\": {\"cap\": 8.0, \"gamma\": 1.05}, \"risk_abs3_1|AF/PVI ablation\": {\"cap\": 15.0, \"gamma\": 2.15}, \"risk_abs3_1|Device implant\": {\"cap\": 15.0, \"gamma\": 0.8500000000000001}, \"risk_abs3_1|Device revision-generator-upgrade\": {\"cap\": 4.0, \"gamma\": 1.75}, \"risk_abs3_1|Diagnostic/testing\": {\"cap\": 8.0, \"gamma\": 0.05}, \"risk_abs3_1|Other ablation\": {\"cap\": 4.0, \"gamma\": 1.4000000000000001}, \"risk_abs3_1|VT/PVC ablation\": {\"cap\": 15.0, \"gamma\": 2.5}, \"risk_abs3_2|AF/PVI ablation\": {\"cap\": 15.0, \"gamma\": 2.25}, \"risk_abs3_2|Device implant\": {\"cap\": 6.0, \"gamma\": 0.8500000000000001}, \"risk_abs3_2|Device revision-generator-upgrade\": {\"cap\": 15.0, \"gamma\": 0.15000000000000002}, \"risk_abs3_2|Diagnostic/testing\": {\"cap\": 15.0, \"gamma\": 2.5}, \"risk_abs3_2|Lead/device extraction-removal\": {\"cap\": 4.0, \"gamma\": 2.5}, \"risk_abs3_2|Other ablation\": {\"cap\": 4.0, \"gamma\": 1.8}, \"risk_abs3_2|VT/PVC ablation\": {\"cap\": 10.0, \"gamma\": 2.5}}, \"score_full_oof_corr_target\": 0.4513893525626647, \"score_name\": \"risk_abs3\", \"score_oof_corr_target\": 0.45625903088206726}",
+    "heldout_gain_ci95": [
+      0.02718364035372112,
+      0.29761202548272514
+    ],
+    "large_wins_gt10": 41,
+    "large_losses_ltminus10": 31
+  },
+  "patient_overlap": 0,
+  "forbidden_llm_feature_file_read": false,
+  "note": "Nested score gates are the stricter leakage-safe versions. best_by_heldout_exploratory is diagnostic only."
+}

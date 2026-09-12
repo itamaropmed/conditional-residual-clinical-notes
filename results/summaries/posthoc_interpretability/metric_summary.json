@@ -1,0 +1,21 @@
+{
+  "n": 2839,
+  "base_mae": 32.23963587466324,
+  "final_mae": 31.77026365632957,
+  "gain": 0.4693722183336744,
+  "median_gain": 0.35420521377653813,
+  "cases_improved_rate": 0.5346953152518492,
+  "cases_worsened_rate": 0.46530468474815073,
+  "large_win_gain_gt10_n": 28,
+  "large_loss_gain_lt_minus10_n": 6,
+  "base_p90_abs_error": 69.60528076171877,
+  "final_p90_abs_error": 69.8267318236742,
+  "base_p95_abs_error": 94.37179412841796,
+  "final_p95_abs_error": 93.22940532588267,
+  "mean_correction": -2.1684745392673146,
+  "median_correction": -2.23532832740878,
+  "mean_abs_correction": 3.358978981872375,
+  "correction_true_residual_corr": 0.15822701602077047,
+  "correction_alignment_rate": 0.562874251497006,
+  "forbidden_llm_feature_file_read": false
+}

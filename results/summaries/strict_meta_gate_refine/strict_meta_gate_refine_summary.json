@@ -1,0 +1,45 @@
+{
+  "n_train": 10882,
+  "n_heldout": 2839,
+  "patient_overlap": 0,
+  "final_train_oof_mae": 32.796417788517424,
+  "final_heldout_mae": 31.77026365632957,
+  "procedure_family_train_oof_mae": 32.76927961993881,
+  "procedure_family_heldout_mae": 31.607522369553593,
+  "best_by_train_oof": {
+    "variant": "refine_pair__pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00__signed_resid_hgb8_x_family_cap_gamma__delta_hgb4_proc6_m0.02",
+    "train_oof_mae": 32.715785990232,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.556624716712225,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.2136389396173465,
+    "improved_rate_vs_final": 0.4906657273687918,
+    "mean_prediction_shift_vs_final": -0.769070873831468,
+    "meta_json": "{\"category\": \"delta_hgb4_proc6\", \"edges\": [-16.74457655240093, -1.2491905736738644, -0.3816439051781799, -0.030455343247066224, 0.07514041315162956, 0.6576437134440525, 16.215586197019462], \"first\": \"pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00\", \"global_weight_on_second\": 0.35000000000000003, \"margin\": 0.02, \"min_n\": 80, \"n_weights\": 4, \"second\": \"signed_resid_hgb8_x_family_cap_gamma\", \"selection\": \"strict second-level GroupKFold pair blend\", \"weights\": {\"__GLOBAL__\": 0.35000000000000003, \"delta_hgb4_proc6_0\": 1.0, \"delta_hgb4_proc6_1\": 0.0, \"delta_hgb4_proc6_5\": 0.0}}",
+    "heldout_gain_ci95": [
+      0.0996601902877543,
+      0.32613051579712027
+    ],
+    "large_wins_gt10": 23,
+    "large_losses_ltminus10": 16
+  },
+  "best_by_heldout_exploratory": {
+    "variant": "refine_selector__disagree_signedbest_proc5_x_family_m0.02",
+    "train_oof_mae": 32.774011896709254,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.5241197789615,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.24614387736806626,
+    "improved_rate_vs_final": 0.4469883761887989,
+    "mean_prediction_shift_vs_final": -0.6701917704670912,
+    "meta_json": "{\"candidates\": [\"procedure_family_gamma_positive\", \"family_cap_gamma\", \"risk_abs_hgb4_x_family_cap_gamma\", \"risk_abs_et3_x_family_cap_gamma\", \"signed_resid_hgb8_x_family_cap_gamma\", \"pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00\", \"pairblend_proc__signed_resid_hgb8_x_family_cap_gamma__disagree_hgb4_x_family_m0.05\"], \"category\": \"disagree_signedbest_proc5_x_family\", \"choices\": {\"__GLOBAL__\": \"pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00\", \"disagree_signedbest_proc5_0|AF/PVI ablation\": \"family_cap_gamma\", \"disagree_signedbest_proc5_0|Device implant\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_0|Diagnostic/testing\": \"risk_abs_hgb4_x_family_cap_gamma\", \"disagree_signedbest_proc5_0|LAA closure\": \"risk_abs_hgb4_x_family_cap_gamma\", \"disagree_signedbest_proc5_0|Other ablation\": \"risk_abs_hgb4_x_family_cap_gamma\", \"disagree_signedbest_proc5_1|AF/PVI ablation\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_1|Device revision-generator-upgrade\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_1|Diagnostic/testing\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_1|Other ablation\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_2|Device revision-generator-upgrade\": \"risk_abs_hgb4_x_family_cap_gamma\", \"disagree_signedbest_proc5_2|Diagnostic/testing\": \"family_cap_gamma\", \"disagree_signedbest_proc5_2|Other\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_2|VT/PVC ablation\": \"signed_resid_hgb8_x_family_cap_gamma\", \"disagree_signedbest_proc5_3|AF/PVI ablation\": \"risk_abs_et3_x_family_cap_gamma\", \"disagree_signedbest_proc5_3|Device implant\": \"risk_abs_et3_x_family_cap_gamma\", \"disagree_signedbest_proc5_3|Device revision-generator-upgrade\": \"family_cap_gamma\", \"disagree_signedbest_proc5_3|Diagnostic/testing\": \"risk_abs_hgb4_x_family_cap_gamma\", \"disagree_signedbest_proc5_3|Other\": \"procedure_family_gamma_positive\", \"disagree_signedbest_proc5_3|Other ablation\": \"signed_resid_hgb8_x_family_cap_gamma\"}, \"edges\": [0.0, 0.1741947552393356, 0.5546914082225614, 1.3314879492922747, 22.976062404358657], \"global_best\": \"pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00\", \"global_scores\": {\"family_cap_gamma\": 32.75711007822889, \"pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00\": 32.75183162527293, \"pairblend_proc__signed_resid_hgb8_x_family_cap_gamma__disagree_hgb4_x_family_m0.05\": 32.76456417150681, \"procedure_family_gamma_positive\": 32.76927961993881, \"risk_abs_et3_x_family_cap_gamma\": 32.762548179770626, \"risk_abs_hgb4_x_family_cap_gamma\": 32.80034430755156, \"signed_resid_hgb8_x_family_cap_gamma\": 32.77527582224163}, \"margin\": 0.02, \"min_n\": 120, \"n_choices\": 20, \"selection\": \"strict second-level GroupKFold candidate selector\"}",
+    "heldout_gain_ci95": [
+      0.1179173064278865,
+      0.3739734390792332
+    ],
+    "large_wins_gt10": 32,
+    "large_losses_ltminus10": 27
+  },
+  "forbidden_llm_feature_file_read": false,
+  "note": "Uses saved OOF predictions only; meta gate is crossfit by patient groups."
+}

@@ -1,0 +1,29 @@
+{
+  "bundle_dir": "work/no_llm_notes/raw_strict_high_signal_tuned_split",
+  "train_rows": 10882,
+  "test_rows": 2839,
+  "patient_overlap": 0,
+  "cases_with_bundle": 13721,
+  "cases_with_any_used_note": 12850,
+  "note_dates_checked": 295463,
+  "cutoff_rule": "each note_date < scheduled_in_room - 2 days",
+  "cutoff_violations": 0,
+  "smallest_margin_hours_before_cutoff": 2.5,
+  "stored_forbidden_llm_feature_file_read": false,
+  "forbidden_code_scan": {
+    "work/no_llm_notes/strict_manifold_text_sweep.py": {
+      "mentions": [
+        "52: FORBIDDEN = PROJECT / \"data\" / \"mayo\" / \"mayo_hrs_llm_features_top11.parquet\"",
+        "72: assert FORBIDDEN.name == \"mayo_hrs_llm_features_top11.parquet\""
+      ],
+      "access_like_hits": []
+    },
+    "work/no_llm_notes/strict_text_residual_tuning.py": {
+      "mentions": [
+        "38: FORBIDDEN = PROJECT / \"data\" / \"mayo\" / \"mayo_hrs_llm_features_top11.parquet\"",
+        "62: assert FORBIDDEN.name == \"mayo_hrs_llm_features_top11.parquet\""
+      ],
+      "access_like_hits": []
+    }
+  }
+}

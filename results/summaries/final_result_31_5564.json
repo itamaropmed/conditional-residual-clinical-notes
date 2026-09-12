@@ -1,0 +1,58 @@
+{
+  "model": "strict_meta_gate_top_refine_oof_selected",
+  "selected_variant": "topref_pair__pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00__signed_resid_hgb8_x_family_cap_gamma__delta_hgb4_proc6_none_n80_m0.02",
+  "split": "temporal patient-disjoint held-out test",
+  "train_cases": 10882,
+  "heldout_cases": 2839,
+  "patient_overlap": 0,
+  "upstream_clean_pls_model": {
+    "model": "pls_raw_word160_26_delta__sgd_huber__g1.550",
+    "train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.77026365632957
+  },
+  "previous_safe_family_gate": {
+    "model": "procedure_family_gamma_positive",
+    "train_oof_mae": 32.76927961993881,
+    "heldout_mae": 31.607522369553593
+  },
+  "final_metrics": {
+    "train_oof_mae": 32.71568392026544,
+    "heldout_mae": 31.556418073067334,
+    "heldout_gain_vs_strict_pls": 0.21384558326223382,
+    "heldout_gain_vs_strict_pls_ci95": [0.1001120179957376, 0.32594709995718024],
+    "heldout_gain_vs_procedure_family_gate": 0.051104296486257667,
+    "heldout_gain_vs_procedure_family_gate_ci95": [-0.01076907, 0.11225947],
+    "improved_rate_vs_strict_pls": 0.48890454385346954,
+    "large_wins_gt10_vs_strict_pls": 23,
+    "large_losses_ltminus10_vs_strict_pls": 16
+  },
+  "architecture": {
+    "candidate_a": "pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00",
+    "candidate_b": "signed_resid_hgb8_x_family_cap_gamma",
+    "gate_score": "delta_hgb4_proc = risk_abs_hgb4_x_family_cap_gamma - procedure_family_gamma_positive",
+    "gate_bins": 6,
+    "global_weight_on_candidate_b": 0.37,
+    "bin_overrides": {
+      "delta_hgb4_proc6_0": 1.0,
+      "delta_hgb4_proc6_1": 0.0,
+      "delta_hgb4_proc6_5": 0.0
+    },
+    "other_bins_weight_on_candidate_b": 0.37
+  },
+  "leakage_status": {
+    "uses_old_11_llm_features": false,
+    "uses_old_llm_feature_file_as_teacher": false,
+    "top_refine_reads_only_saved_oof_and_test_prediction_csvs": true,
+    "strict_note_cutoff_upstream": "note_date < scheduled_in_room - 2 days",
+    "same_day_preop_notes_allowed_upstream": false,
+    "postop_doc_types_allowed_upstream": false,
+    "meta_gate_policy": "patient GroupKFold; score-bin edges and blend weights learned from each outer training fold only",
+    "heldout_target_policy": "held-out target used only for final scoring"
+  },
+  "exploratory_not_final": {
+    "best_heldout_variant": "topref_pair__procedure_family_gamma_positive__signed_resid_hgb8_x_family_cap_gamma__candidate_spread7_family_n80_m0.02",
+    "train_oof_mae": 32.780635503022495,
+    "heldout_mae": 31.52340294571183,
+    "reason_not_final": "not selected by train OOF; keep as lockbox candidate only"
+  }
+}

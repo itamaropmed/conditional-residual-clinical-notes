@@ -1,0 +1,43 @@
+{
+  "model": "pls_raw_word160_26_delta",
+  "residual_head": "sgd_huber",
+  "gamma": 1.55,
+  "split": "temporal patient-disjoint held-out test",
+  "train_cases": 10882,
+  "heldout_cases": 2839,
+  "patient_overlap": 0,
+  "base": {
+    "formula": "0.6 * xgb_tuned_v2 + 0.4 * xgb_absoluteerror_same_shape",
+    "train_oof_mae": 32.966712482938256,
+    "heldout_mae": 32.239635874663244,
+    "features": "tabular-only with safe feature engineering and OOF-safe target encoding"
+  },
+  "final_metrics": {
+    "mae": 31.77026365632957,
+    "rmse": 47.08623013872459,
+    "r2": 0.7537433189679652,
+    "median_absolute_error": 21.396960248342452,
+    "p90_absolute_error": 69.8267318236742,
+    "p95_absolute_error": 93.22940532588267,
+    "w30": 0.6220500176118352,
+    "w60": 0.8622754491017964,
+    "mean_error_pred_minus_actual": -2.854216200852376,
+    "underestimation_rate": 0.48256428319830924,
+    "overestimation_rate": 0.5174357168016908
+  },
+  "gain_vs_base": {
+    "mae_minutes": 0.4693722183336741,
+    "ci95": [0.33575435657269637, 0.6065614085107865]
+  },
+  "mae_ci95": [30.613918432512193, 33.04925533135617],
+  "leakage_status": {
+    "uses_old_11_llm_features": false,
+    "uses_old_llm_feature_file_as_teacher": false,
+    "strict_note_cutoff": "note_date < scheduled_in_room - 2 days",
+    "same_day_preop_notes_allowed": false,
+    "postop_doc_types_allowed": false,
+    "target_encoding_policy": "train OOF for train rows; full train only for held-out test transform",
+    "residual_policy": "actual_duration - base_oof"
+  }
+}
+

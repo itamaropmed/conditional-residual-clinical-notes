@@ -1,0 +1,56 @@
+{
+  "n_train": 10882,
+  "n_heldout": 2839,
+  "patient_overlap": 0,
+  "final_train_oof_mae": 32.796417788517424,
+  "final_heldout_mae": 31.77026365632957,
+  "best_by_train_oof": {
+    "variant": "pairblend_proc__risk_abs_et3_x_family_cap_gamma__risk_hgb4_m0.00",
+    "train_oof_mae": 32.75183162527293,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.60494345868472,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.16532019764484865,
+    "improved_rate_vs_final": 0.5029940119760479,
+    "mean_prediction_shift_vs_final": -0.7603033769080991,
+    "meta_json": "{\"category\": \"risk_hgb4\", \"edges\": [3.1306546896811818, 16.015596179846813, 22.34145381276113, 33.03883179938389, 94.51128562149312], \"first\": \"procedure_family_gamma_positive\", \"global_weight_on_second\": 0.6000000000000001, \"margin\": 0.0, \"min_n\": 120, \"n_weights\": 5, \"second\": \"risk_abs_et3_x_family_cap_gamma\", \"selection\": \"strict second-level GroupKFold pair blend\", \"weights\": {\"__GLOBAL__\": 0.6000000000000001, \"risk_hgb4_0\": 1.0, \"risk_hgb4_1\": 0.2, \"risk_hgb4_2\": 0.0, \"risk_hgb4_3\": 1.0}}",
+    "heldout_gain_ci95": [
+      0.049623875169248904,
+      0.2813372586638868
+    ],
+    "large_wins_gt10": 22,
+    "large_losses_ltminus10": 22
+  },
+  "best_by_heldout_exploratory": {
+    "variant": "pairblend_proc__signed_resid_hgb8_x_family_cap_gamma__disagree_hgb4_x_family_m0.05",
+    "train_oof_mae": 32.76456417150681,
+    "final_train_oof_mae": 32.796417788517424,
+    "heldout_mae": 31.52516332972111,
+    "final_heldout_mae": 31.77026365632957,
+    "heldout_gain_vs_final": 0.24510032660845174,
+    "improved_rate_vs_final": 0.523775977456851,
+    "mean_prediction_shift_vs_final": -0.554866606177882,
+    "meta_json": "{\"category\": \"disagree_hgb4_x_family\", \"edges\": [0.0, 0.11942683335537652, 0.5014385437634701, 1.3358848104989427, 16.744576552400872], \"first\": \"procedure_family_gamma_positive\", \"global_weight_on_second\": 0.5, \"margin\": 0.05, \"min_n\": 120, \"n_weights\": 6, \"second\": \"signed_resid_hgb8_x_family_cap_gamma\", \"selection\": \"strict second-level GroupKFold pair blend\", \"weights\": {\"__GLOBAL__\": 0.5, \"disagree_hgb4_1|AF/PVI ablation\": 0.0, \"disagree_hgb4_2|AF/PVI ablation\": 0.0, \"disagree_hgb4_2|Diagnostic/testing\": 0.0, \"disagree_hgb4_3|AF/PVI ablation\": 1.0, \"disagree_hgb4_3|Other ablation\": 1.0}}",
+    "heldout_gain_ci95": [
+      0.1352247003394373,
+      0.3553252257649063
+    ],
+    "large_wins_gt10": 21,
+    "large_losses_ltminus10": 13
+  },
+  "score_correlations": {
+    "risk_hgb": {
+      "outer": 0.45189037198309095,
+      "full_oof": 0.4422417614982156
+    },
+    "risk_et": {
+      "outer": 0.4571604791472556,
+      "full_oof": 0.44985796097195735
+    },
+    "signed_hgb": {
+      "outer": 0.07925917720932729,
+      "full_oof": 0.11299593581566095
+    }
+  },
+  "forbidden_llm_feature_file_read": false
+}
