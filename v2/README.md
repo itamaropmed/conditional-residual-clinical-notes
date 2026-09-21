@@ -1,9 +1,10 @@
-# CRCNL v2/v3 — corrected holdout MAE 30.4811
+# CRCNL — leak-safe holdout MAE 30.8770
 
-> **Read [`LEAKAGE_AUDIT.md`](LEAKAGE_AUDIT.md) first.** The v2 number (30.6866)
-> was audited after the fact and was NOT leakage-free. `v3_corrected.py` is the
-> version to use. The headline feature gain survived the correction and got
-> slightly stronger: **+0.5500 min [+0.3343, +0.7686]**.
+> **Read [`LEAKAGE_AUDIT.md`](LEAKAGE_AUDIT.md) first.** v2 (30.6866) was NOT
+> leakage-free. Six problems were found and fixed across v3 and v4.
+> **`v4_leaksafe.py` is the version to use**: holdout MAE **30.8770**, with the
+> headline procedure multi-hot gain at **+0.5179 [+0.2949, +0.7389]** — stable
+> across every correction, which is what a real signal does.
 
 Rebuild of the Conditional Residual Clinical Notes Learner duration model.
 

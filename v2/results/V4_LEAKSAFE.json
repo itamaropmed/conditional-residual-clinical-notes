@@ -1,0 +1,70 @@
+{
+  "v3 (all rows from 2022)": {
+    "n_train": 10784,
+    "n_features": 139,
+    "holdout_mae": 30.481141571468022,
+    "new_patient_mae": 30.481141571468022,
+    "vs_v4b": {
+      "gain": -0.39583457461295074,
+      "ci95": [
+        -0.5958414913452778,
+        -0.1938045450855395
+      ]
+    }
+  },
+  "v4a +Rule10 burn-in": {
+    "n_train": 9743,
+    "n_features": 135,
+    "holdout_mae": 30.700832208958207,
+    "new_patient_mae": 30.700832208958207,
+    "vs_v4b": {
+      "gain": -0.17614393712276671,
+      "ci95": [
+        -0.3035417241639952,
+        -0.04762658443986582
+      ]
+    }
+  },
+  "v4b -staffing (LEAK-SAFE)": {
+    "n_train": 9743,
+    "n_features": 133,
+    "holdout_mae": 30.876976146080974,
+    "new_patient_mae": 30.876976146080974
+  },
+  "v4c -staffing -bmi": {
+    "n_train": 9743,
+    "n_features": 131,
+    "holdout_mae": 30.832635928336046,
+    "new_patient_mae": 30.832635928336046,
+    "vs_v4b": {
+      "gain": -0.04434021774492694,
+      "ci95": [
+        -0.1566547285989218,
+        0.06771698316729373
+      ]
+    }
+  },
+  "rule6": {
+    "bmi_missing_rank": 122,
+    "bmi_missing_importance": 0.005646173842251301,
+    "top8": [
+      "lag_proc_mean",
+      "primary_procedure_name",
+      "procedures_dedup",
+      "sched_room_minutes",
+      "proc__n_unique",
+      "proc__CORONARY ANGIOGRAPHY",
+      "proc__PULSED FIELD ABLATION",
+      "proc__ABLATION - ATRIAL FLUTTER - LEFT"
+    ]
+  },
+  "exclusions": {
+    "start": 14195,
+    "backfilled": 105,
+    "aborted": 23,
+    "null_procedure": 6,
+    "kept": 14066
+  },
+  "n_holdout": 2813,
+  "n_holdout_new_patient": 2813
+}
