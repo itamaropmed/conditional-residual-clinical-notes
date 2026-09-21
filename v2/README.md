@@ -1,4 +1,9 @@
-# CRCNL v2 — 30.6866 min holdout MAE
+# CRCNL v2/v3 — corrected holdout MAE 30.4811
+
+> **Read [`LEAKAGE_AUDIT.md`](LEAKAGE_AUDIT.md) first.** The v2 number (30.6866)
+> was audited after the fact and was NOT leakage-free. `v3_corrected.py` is the
+> version to use. The headline feature gain survived the correction and got
+> slightly stronger: **+0.5500 min [+0.3343, +0.7686]**.
 
 Rebuild of the Conditional Residual Clinical Notes Learner duration model.
 

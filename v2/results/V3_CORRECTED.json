@@ -1,0 +1,25 @@
+{
+  "exclusions": {
+    "start": 14195,
+    "backfilled": 105,
+    "aborted": 23,
+    "null_procedure": 6,
+    "kept": 14066
+  },
+  "n_train": 10784,
+  "n_holdout": 2813,
+  "n_features": 139,
+  "procedure_vocab_train_only": 84,
+  "holdout_mae_without_multihot": 31.031141050591657,
+  "holdout_mae_v3": 30.481141571468022,
+  "multihot_gain": 0.5499994791236332,
+  "multihot_ci95": [
+    0.33427853952130515,
+    0.7685789182861633
+  ],
+  "mae_middle_98pct": 29.355082790604357,
+  "mae_tails": 86.94787098277699,
+  "v2_uncorrected": 30.6866,
+  "published_crcnl": 31.556418,
+  "note": "v2 and v3 holdouts differ (v3 drops 42 excluded rows), so the two MAEs are not strictly comparable"
+}
