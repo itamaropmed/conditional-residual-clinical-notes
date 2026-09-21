@@ -1,0 +1,34 @@
+{
+  "sweep": [
+    {
+      "half_life_days": null,
+      "val_mae": 31.514629355837652
+    },
+    {
+      "half_life_days": 1095,
+      "val_mae": 31.652793304947938
+    },
+    {
+      "half_life_days": 730,
+      "val_mae": 31.876198328862653
+    },
+    {
+      "half_life_days": 547,
+      "val_mae": 32.064557579493716
+    },
+    {
+      "half_life_days": 365,
+      "val_mae": 32.39359434119632
+    },
+    {
+      "half_life_days": 240,
+      "val_mae": 32.33242151245192
+    }
+  ],
+  "selected_half_life": null,
+  "holdout_unweighted": 30.78155957296223,
+  "holdout_weighted": 30.78155957296223,
+  "holdout_weighted_2spec": 30.685536286158225,
+  "published_crcnl": 31.556418,
+  "improvement_vs_published": 0.8708817138417757
+}

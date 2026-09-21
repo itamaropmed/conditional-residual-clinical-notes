@@ -1,0 +1,15 @@
+{
+  "n_train": 10882,
+  "n_holdout": 2839,
+  "n_features": 152,
+  "holdout_mae_without_procedure_multihot": 31.193587780502657,
+  "holdout_mae_final": 30.686584634569254,
+  "procedure_multihot_gain": 0.5070031459334032,
+  "gain_ci95": [
+    0.2992539646676747,
+    0.7044889770372101
+  ],
+  "published_crcnl_holdout_mae": 31.556418073067334,
+  "improvement_vs_published": 0.8698334384980804,
+  "zero_information_mad": 72.52236703064459
+}

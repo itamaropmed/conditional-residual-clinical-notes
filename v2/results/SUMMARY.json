@@ -1,0 +1,37 @@
+{
+  "what_was_measured": "graded LLM-style extraction vs binary regex flags, as a residual channel",
+  "split": {
+    "train": 10882,
+    "holdout": 2839,
+    "patient_overlap": 0,
+    "reproduces_published_split": true
+  },
+  "base_model": {
+    "published_tabular_base_holdout_mae": 32.2396,
+    "published_full_crcnl_holdout_mae": 31.556418,
+    "rebuilt_tabular_with_lag_block_holdout_mae": 31.3915,
+    "note": "the lag block (surgeon x procedure history) is audit-verified time-honest; it alone beats the published full notes pipeline"
+  },
+  "extractor_accuracy_vs_44_hand_read_cases": {
+    "mean_exact": 0.5371900826446282,
+    "mean_within_one_grade": 0.8822314049586776,
+    "mean_abs_grade_error": 0.6115702479338844
+  },
+  "residual_channel_on_2352_sampled_training_cases": {
+    "residual_mae": 34.9112,
+    "signed_residual_correlation": {
+      "regex_binary": 0.04,
+      "graded_extraction": -0.007
+    },
+    "abs_residual_correlation": {
+      "regex_binary": 0.041,
+      "graded_extraction": 0.09
+    },
+    "linear_ridge_gain": {
+      "regex_binary": -0.744,
+      "graded_extraction": -0.762
+    },
+    "verdict": "graded extraction is ~2.2x better than regex at predicting residual MAGNITUDE, but neither predicts residual DIRECTION, and neither improves MAE against a base that already contains the lag block"
+  },
+  "conclusion": "the surgeon x procedure lag block absorbs most of what the clinical notes were contributing. The published +0.469 min note gain was measured against a base without lags."
+}

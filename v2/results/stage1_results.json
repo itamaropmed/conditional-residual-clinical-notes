@@ -1,0 +1,23 @@
+{
+  "n_train": 10882,
+  "n_holdout": 2839,
+  "n_holdout_new_patient": 2839,
+  "n_llm_features": 33,
+  "base": {
+    "oof_mae": 34.020582065887254,
+    "holdout_mae": 35.04023560271712
+  },
+  "variants": {
+    "llm_structured": {
+      "learner": "huber",
+      "gamma": 0.9500000000000001,
+      "oof_mae": 33.72869128627298,
+      "holdout_mae": 34.50847420969611,
+      "gain_vs_base": 0.5317613930210044,
+      "gain_ci95": [
+        0.348237805911419,
+        0.7236380411287735
+      ]
+    }
+  }
+}
