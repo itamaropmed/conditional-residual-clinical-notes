@@ -1,0 +1,40 @@
+{
+  "A_v4b_no_notes": {
+    "n_features": 133,
+    "holdout_mae": 30.876976146080974,
+    "holdout_mae_notes_only": 30.867039085453392
+  },
+  "B_+anchor_sims": {
+    "n_features": 161,
+    "holdout_mae": 31.123505171617495,
+    "gain_vs_v4b": -0.2465290255365192,
+    "ci95": [
+      -0.4846017978727881,
+      -0.02304513214577825
+    ],
+    "holdout_mae_notes_only": 31.112887055106313
+  },
+  "C_+doc_svd": {
+    "n_features": 230,
+    "holdout_mae": 31.429681921700247,
+    "gain_vs_v4b": -0.5527057756192736,
+    "ci95": [
+      -0.85790786600774,
+      -0.2606889959166492
+    ],
+    "holdout_mae_notes_only": 31.415089135156396
+  },
+  "D_+both": {
+    "n_features": 257,
+    "holdout_mae": 31.503676477209172,
+    "gain_vs_v4b": -0.6267003311281988,
+    "ci95": [
+      -0.9381511750443313,
+      -0.33419570534669163
+    ],
+    "holdout_mae_notes_only": 31.488451605848436
+  },
+  "n_train": 9743,
+  "n_holdout": 2813,
+  "n_holdout_with_notes": 2808
+}
